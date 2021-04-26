@@ -7,7 +7,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   final AuthService _auth = AuthService();
 
   @override
@@ -39,7 +38,19 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
-      //  body: Container(child:BottomNavigationBar(backgroundColor: Colors.white,item)),s
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.qr_code_scanner_rounded),
+            label: 'Scan',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.note_rounded),
+            label: 'Results',
+          ),
+        ],
+      ),
     );
   }
 }
