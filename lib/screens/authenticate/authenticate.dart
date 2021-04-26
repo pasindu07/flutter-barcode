@@ -1,3 +1,5 @@
+import 'package:barcode/screens/authenticate/register.dart';
+import 'package:barcode/screens/authenticate/signIn.dart';
 import 'package:flutter/material.dart';
 
 
