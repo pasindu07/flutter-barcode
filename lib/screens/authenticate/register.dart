@@ -58,8 +58,9 @@ class _RegisterState extends State<Register> {
                           decoration: textInputDecoration.copyWith(
                               hintText: 'Enter Password'),
                           controller: _pass,
-                          validator: (value) =>
-                              value.length<6 ? 'Enter an Password With 6+ Characters' : null,
+                          validator: (value) => value.length < 6
+                              ? 'Enter an Password With 6+ Characters'
+                              : null,
                           onChanged: (value) {
                             password = value;
                           },
@@ -71,8 +72,7 @@ class _RegisterState extends State<Register> {
                               hintText: 'Re-Enter Password'),
                           controller: _confirmPass,
                           validator: (value) {
-                            if (value.isEmpty) 
-                              return 'Re-Enter the Password';
+                            if (value.isEmpty) return 'Re-Enter the Password';
                             if (value != _pass.text)
                               return 'Passwords Do Not Match';
                             return null;
@@ -99,7 +99,12 @@ class _RegisterState extends State<Register> {
                           icon: Icon(Icons.app_registration),
                           label: Text('Register'),
                         ),
-                        SizedBox(height: 20.0),
+                        SizedBox(height: 12.0),
+                        Text(
+                          error,
+                          style: TextStyle(color: Colors.red, fontSize: 14.0),
+                        ),
+                        SizedBox(height: 5.0),
                       ],
                     ),
                   ),
