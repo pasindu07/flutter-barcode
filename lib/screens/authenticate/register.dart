@@ -54,17 +54,19 @@ class _RegisterState extends State<Register> {
                         ),
                         SizedBox(height: 20.0),
                         TextFormField(
+                          obscureText: true,
                           decoration: textInputDecoration.copyWith(
                               hintText: 'Enter Password'),
                           controller: _pass,
                           validator: (value) =>
-                              value.isEmpty ? 'Enter an Password' : null,
+                              value.length<6 ? 'Enter an Password With 6+ Characters' : null,
                           onChanged: (value) {
                             password = value;
                           },
                         ),
                         SizedBox(height: 20.0),
                         TextFormField(
+                          obscureText: true,
                           decoration: textInputDecoration.copyWith(
                               hintText: 'Re-Enter Password'),
                           controller: _confirmPass,

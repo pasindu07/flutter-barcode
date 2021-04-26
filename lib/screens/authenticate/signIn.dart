@@ -50,6 +50,7 @@ class _SignInState extends State<SignIn> {
                   ),
                   SizedBox(height: 20.0),
                   TextFormField(
+                    obscureText: true,
                     decoration:
                         textInputDecoration.copyWith(hintText: 'Password'),
                     validator: (value) =>

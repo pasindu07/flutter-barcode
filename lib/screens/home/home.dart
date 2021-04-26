@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-
+import 'package:barcode/services/auth.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -8,10 +7,39 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  final AuthService _auth = AuthService();
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      backgroundColor: Colors.green[50],
+      appBar: AppBar(
+        backgroundColor: Colors.blue[700],
+        centerTitle: false,
+        title: Text(
+          'Scan',
+          style: TextStyle(
+            fontSize: 30.0,
+          ),
+        ),
+        actions: <Widget>[
+          TextButton.icon(
+            onPressed: () async {
+              await _auth.signOut();
+            },
+            icon: Icon(
+              Icons.logout,
+              color: Colors.white,
+            ),
+            label: Text(
+              'Log Out',
+              style: TextStyle(color: Colors.white),
+            ),
+          )
+        ],
+      ),
+      //  body: Container(child:BottomNavigationBar(backgroundColor: Colors.white,item)),s
     );
   }
 }
