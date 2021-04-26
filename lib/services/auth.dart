@@ -12,11 +12,27 @@ class AuthService{
     return user != null ? FireUser(uid: user.uid) : null;
   }
 
+  //auth change user stream
   Stream<FireUser> get user{
     return _auth
         .authStateChanges()
         .map(_userFromFireUser);
   }
+
+  //sign in with email and password
+  Future logInWithEmailAndPassword(String email,String password) async{
+    try{
+        UserCredential result = await _auth.signInWithEmailAndPassword(email: email, password: password);
+        User user = result.user;
+        return _userFromFireUser(user);
+    }catch(e){
+      print(e.toString());
+      return null;
+    }
+  }
+
+  //
+
 
 
 }
