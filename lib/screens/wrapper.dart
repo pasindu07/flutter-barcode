@@ -1,3 +1,4 @@
+import 'package:barcode/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:barcode/models/fireUser.dart';
 import 'package:barcode/screens/authenticate/authenticate.dart';

@@ -23,6 +23,6 @@ class BarCodeApp extends StatelessWidget {
         home: Wrapper(),
       ),
 
-      )
+      );
   }
 }
