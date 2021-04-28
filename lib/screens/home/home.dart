@@ -1,3 +1,4 @@
+import 'package:barcode/screens/home/placeHold.dart';
 import 'package:flutter/material.dart';
 import 'package:barcode/services/auth.dart';
 
@@ -7,6 +8,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _currentIndex = 0;
+  final List<Widget> _children = [
+    PlaceholderWidget(Colors.amber),
+    PlaceholderWidget(Colors.green),
+  ];
   final AuthService _auth = AuthService();
 
   @override
@@ -16,8 +22,9 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.blue[700],
         centerTitle: false,
+        elevation: 0.0,
         title: Text(
-          'Scan',
+          'Barcode Scanner',
           style: TextStyle(
             fontSize: 30.0,
           ),
@@ -38,8 +45,10 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
+      body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        currentIndex: _currentIndex,
+        onTap: onTabTap,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.qr_code_scanner_rounded),
@@ -52,5 +61,11 @@ class _HomeState extends State<Home> {
         ],
       ),
     );
+  }
+
+  void onTabTap(int index){
+    setState(() {
+      _currentIndex = index;
+    });
   }
 }
