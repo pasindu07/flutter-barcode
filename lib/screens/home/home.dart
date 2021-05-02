@@ -1,4 +1,6 @@
-import 'package:barcode/screens/home/placeHold.dart';
+import 'package:barcode/screens/contents/results.dart';
+import 'package:barcode/screens/contents/scan.dart';
+// import 'package:barcode/screens/home/placeHold.dart';
 import 'package:flutter/material.dart';
 import 'package:barcode/services/auth.dart';
 
@@ -10,8 +12,10 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    PlaceholderWidget(Colors.amber),
-    PlaceholderWidget(Colors.green),
+    Scan(),
+    Results(),
+    // PlaceholderWidget(Colors.amber),
+    // PlaceholderWidget(Colors.green),
   ];
   final AuthService _auth = AuthService();
 
