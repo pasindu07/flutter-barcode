@@ -14,7 +14,7 @@ class _ScanState extends State<Scan> {
   final picker = ImagePicker();
 
   Future getImage() async {
-    final pickedFile = await picker.getImage(source: ImageSource.camera);
+    final pickedFile = await picker.getImage(source: ImageSource.gallery);
     // final File imageFile = getImageFile();
     
     setState(() {

@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
         centerTitle: false,
         elevation: 0.0,
         title: Text(
-          'Barcode Scanner',
+          'Barcode Scan',
           style: TextStyle(
             fontSize: 30.0,
           ),
