@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
             body: Wrap(
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(0.0, 180.0, 0.0, 0.0),
+                  margin: EdgeInsets.fromLTRB(0.0, 50.0, 0.0, 0.0),
                   padding:
                       EdgeInsets.symmetric(horizontal: 50.0, vertical: 50.0),
                   child: Form(
@@ -112,7 +112,7 @@ class _RegisterState extends State<Register> {
                 //button to navigate to sign in
                 Center(
                   child: Container(
-                    margin: EdgeInsets.only(top: 40.0),
+                    margin: EdgeInsets.only(top: 10.0),
                     padding:
                         EdgeInsets.symmetric(horizontal: 50.0, vertical: 50.0),
                     child: ElevatedButton.icon(

@@ -35,7 +35,7 @@ class _SignInState extends State<SignIn> {
             body: Wrap(
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(0.0, 250.0, 0.0, 0.0),
+                  margin: EdgeInsets.fromLTRB(0.0, 150.0, 0.0, 0.0),
                   padding:
                       EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
                   child: Form(
@@ -99,7 +99,7 @@ class _SignInState extends State<SignIn> {
                 ),
                 Center(
                   child: Container(
-                    margin: EdgeInsets.only(top: 110.0),
+                    margin: EdgeInsets.only(top: 60.0),
                     padding:
                         EdgeInsets.symmetric(horizontal: 50.0, vertical: 50.0),
                     child: ElevatedButton.icon(
