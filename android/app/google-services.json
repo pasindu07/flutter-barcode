@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "643358425324",
+    "project_id": "bar-code-reader-52d5d",
+    "storage_bucket": "bar-code-reader-52d5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643358425324:android:21f30e6b88d7cee79ce5c9",
+        "android_client_info": {
+          "package_name": "com.code.barcode"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643358425324-m2pthdn55leno1rm4s3ovom4qliaaj8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDUXvEl8oncVWSJM-a8o8BomE4IiZs8o0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643358425324-m2pthdn55leno1rm4s3ovom4qliaaj8k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "643358425324-7r9d62o9au3jaq0fvr2rlpriar1vrof6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.code.barcode"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
