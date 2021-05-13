@@ -1,7 +1,7 @@
 
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:firebase_ml_vision/firebase_ml_vision.dart';
+import 'package:google_ml_vision/google_ml_vision.dart';
 import 'package:image_picker/image_picker.dart';
 
 class Scan extends StatefulWidget {
@@ -20,8 +20,8 @@ class _ScanState extends State<Scan> {
     setState(() {
       if (pickedFile != null) {
         // _image = File(pickedFile.path);
-        final FirebaseVisionImage visionImage = FirebaseVisionImage.fromFile(File(pickedFile.path));
-        final BarcodeDetector barcodeDetector = FirebaseVision.instance.barcodeDetector();
+        final GoogleVisionImage visionImage = GoogleVisionImage.fromFile(File(pickedFile.path));
+        final BarcodeDetector barcodeDetector = GoogleVision.instance.barcodeDetector();
         detectImage(visionImage,barcodeDetector);
         
       } else {
@@ -31,7 +31,7 @@ class _ScanState extends State<Scan> {
   }
 
 //used to detect the captured image by the barcode detector
-  Future<void> detectImage(FirebaseVisionImage visionImage,BarcodeDetector barcodeDetector) async{
+  Future<void> detectImage(GoogleVisionImage visionImage,BarcodeDetector barcodeDetector) async{
     final List<Barcode> barcodes = await barcodeDetector.detectInImage(visionImage);
     printBarcodes(barcodes);
     // return barcodes;

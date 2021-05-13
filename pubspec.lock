@@ -120,13 +120,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-  firebase_ml_vision:
-    dependency: "direct main"
-    description:
-      name: firebase_ml_vision
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.12.0+1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -156,6 +149,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  google_ml_vision:
+    dependency: "direct main"
+    description:
+      name: google_ml_vision
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3+1"
   http:
     dependency: transitive
     description:
